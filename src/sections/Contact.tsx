@@ -78,8 +78,17 @@ export default function Contact() {
     setIsSubmitting(true);
     
     // Using Formspree for direct email delivery
+    const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+    console.log('Formspree endpoint:', endpoint); // Debug log
+    
+    if (!endpoint) {
+      console.error('Formspree endpoint not found in environment variables');
+      setIsSubmitting(false);
+      return;
+    }
+    
     try {
-      const response = await fetch(import.meta.env.VITE_FORMSPREE_ENDPOINT || 'https://formspree.io/f/xdawonzq', {
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -96,6 +105,10 @@ export default function Contact() {
         setIsSent(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
         setTimeout(() => setIsSent(false), 5000);
+      } else {
+        console.error('Formspree response error:', response.status, response.statusText);
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
       }
     } catch (error) {
       console.error('Error sending message:', error);
