@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { 
   MapPin, Mail, Phone, GraduationCap, 
-  Database, Code, LineChart, Brain, Workflow, Download
+  Database, Code, Workflow
 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
