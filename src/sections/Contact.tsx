@@ -79,7 +79,7 @@ export default function Contact() {
     
     // Using Formspree for direct email delivery
     try {
-      const response = await fetch('https://formspree.io/f/xnqevwaj', {
+      const response = await fetch(import.meta.env.VITE_FORMSPREE_ENDPOINT || 'https://formspree.io/f/xdawonzq', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
