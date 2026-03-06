@@ -1,0 +1,117 @@
+/* App-specific styles */
+
+/* Smooth scroll for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure full-width sections */
+section {
+  width: 100%;
+}
+
+/* Active state for experience cards */
+.experience-card.active .glass {
+  border-color: rgba(0, 255, 157, 0.3);
+  box-shadow: 0 0 30px rgba(0, 255, 157, 0.1);
+}
+
+/* RTL direction for alternating timeline */
+.md\:direction-rtl {
+  direction: rtl;
+}
+
+.md\:direction-rtl > * {
+  direction: ltr;
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Perspective utility */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* Custom focus styles */
+*:focus-visible {
+  outline: 2px solid #00ff9d;
+  outline-offset: 2px;
+}
+
+/* Button hover lift effect */
+button:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+/* Input focus animation */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px rgba(0, 255, 157, 0.2);
+}
+
+/* Card hover transitions */
+.glass {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Loading state animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Mobile menu animation */
+.mobile-nav-item {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
