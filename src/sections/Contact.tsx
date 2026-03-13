@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Mail, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,38 +78,27 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Using Formspree for direct email delivery
-    const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
-    console.log('Formspree endpoint:', endpoint); // Debug log
-    
-    if (!endpoint) {
-      console.error('Formspree endpoint not found in environment variables');
-      setIsSubmitting(false);
-      return;
-    }
-    
+    // Using EmailJS for direct email delivery
     try {
-      const response = await fetch(endpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }),
-      });
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'sdnikith@gmail.com'
+      };
+
+      const response = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
       
-      if (response.ok) {
+      if (response.status === 200) {
         setIsSent(true);
         setFormData({ name: '', email: '', subject: '', message: '' });
         setTimeout(() => setIsSent(false), 5000);
-      } else {
-        console.error('Formspree response error:', response.status, response.statusText);
-        const errorText = await response.text();
-        console.error('Error response:', errorText);
       }
     } catch (error) {
       console.error('Error sending message:', error);
