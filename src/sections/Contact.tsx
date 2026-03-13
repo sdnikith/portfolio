@@ -9,8 +9,8 @@ const contactMethods = [
   { 
     icon: Mail, 
     label: 'Email', 
-    value: 'dsnikith6671@gmail.com', 
-    href: 'mailto:dsnikith6671@gmail.com',
+    value: 'sdnikith@gmail.com', 
+    href: 'mailto:sdnikith@gmail.com',
   },
   { 
     icon: Phone, 

@@ -14,7 +14,7 @@ const targetRoles = [
 
 const contactInfo = [
   { icon: MapPin, label: 'Location', value: 'United States', href: '#' },
-  { icon: Mail, label: 'Email', value: 'dsnikith6671@gmail.com', href: 'mailto:dsnikith6671@gmail.com' },
+  { icon: Mail, label: 'Email', value: 'sdnikith@gmail.com', href: 'mailto:sdnikith@gmail.com' },
   { icon: Phone, label: 'Phone', value: '+1 (650) 605-3069', href: 'tel:+16506053069' },
   { icon: GraduationCap, label: 'Education', value: 'M.S. Data Science', href: '#education' },
 ];
