@@ -15,8 +15,8 @@ const contactMethods = [
   { 
     icon: Phone, 
     label: 'Phone', 
-    value: '+1 (650) 605-3069', 
-    href: 'tel:+16506053069',
+    value: '650 605 3668', 
+    href: 'tel:6506053668',
   },
   { 
     icon: MapPin, 
