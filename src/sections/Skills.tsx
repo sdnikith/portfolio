@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
-  Code, Cloud, Database, Server, Workflow, GitBranch, 
+  Code, Cloud, Database, Workflow, 
   BarChart3, Shield, Cpu
 } from 'lucide-react';
 
