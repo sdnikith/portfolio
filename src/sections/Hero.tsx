@@ -5,7 +5,7 @@ import { ChevronDown, ArrowRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const roles = ['Senior Data Engineer'];
+const roles = ['Senior Python Developer'];
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -206,7 +206,7 @@ export default function Hero() {
 
       <div className="hero-content relative z-10 text-center px-4 max-w-4xl mx-auto">
         <p className="text-neon text-sm md:text-base font-heading tracking-widest uppercase mb-4">
-          6 Years of Turning Data Into Decisions
+          Senior Python Developer — Architecting high-throughput production systems
         </p>
 
         <h1
@@ -230,8 +230,7 @@ export default function Hero() {
         </p>
 
         <p className="hero-roles text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-8">
-          I build data pipelines that scale, analytics that inform, 
-          and ML models that predict—helping businesses make smarter decisions.
+          Senior Python Developer with 10 years experience building high-throughput microservices, event-driven streaming systems, and cloud-native data platforms.
         </p>
 
         <div className="hero-cta flex flex-col sm:flex-row items-center justify-center gap-4">

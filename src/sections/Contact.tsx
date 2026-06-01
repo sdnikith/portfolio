@@ -15,13 +15,13 @@ const contactMethods = [
   { 
     icon: Phone, 
     label: 'Phone', 
-    value: '650 605 3668', 
-    href: 'tel:6506053668',
+    value: '+1 (650) 605-3668', 
+    href: 'tel:+16506053668',
   },
   { 
     icon: MapPin, 
     label: 'Location', 
-    value: 'USA', 
+    value: 'Irving, TX, USA', 
     href: '#',
   },
 ];
@@ -143,7 +143,7 @@ export default function Contact() {
           <div className="space-y-6 contact-animate">
             <div>
               <h3 className="font-heading font-bold text-white text-2xl mb-6">Contact Information</h3>
-              <p className="text-gray-400 mb-8">I'm currently open to Senior Data Engineer roles. Let's discuss how I can contribute to your data infrastructure.</p>
+              <p className="text-gray-400 mb-8">Senior Python Developer available for new opportunities. Open to roles in Data Engineering, Platform, and ML infrastructure.</p>
             </div>
             
             {/* Contact Methods */}

@@ -9,13 +9,13 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const targetRoles = [
-  { icon: Database, label: 'Senior Data Engineer', color: '#00ff9d' }
+  { icon: Database, label: 'Senior Python Developer', color: '#00ff9d' }
 ];
 
 const contactInfo = [
-  { icon: MapPin, label: 'Location', value: 'United States', href: '#' },
+  { icon: MapPin, label: 'Location', value: 'Irving, TX, USA', href: '#' },
   { icon: Mail, label: 'Email', value: 'sdnikith@gmail.com', href: 'mailto:sdnikith@gmail.com' },
-  { icon: Phone, label: 'Phone', value: '650 605 3668', href: 'tel:6506053668' },
+  { icon: Phone, label: 'Phone', value: '+1 (650) 605-3668', href: 'tel:+16506053668' },
   { icon: GraduationCap, label: 'Education', value: 'M.S. Data Science', href: '#education' },
 ];
 
@@ -71,7 +71,7 @@ export default function About() {
           <div className="lg:col-span-2 space-y-6">
             <div className="animate-item">
               <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-                I&apos;m a <span className="text-neon font-semibold">Data Professional</span> with 6 years of hands-on experience transforming raw data into actionable insights. I&apos;ve architected data pipelines processing terabytes daily, built ML models for fraud detection, and created analytics dashboards that shaped strategic decisions at Fortune 500 companies.
+                <strong>Senior Python Developer</strong> with 10 years of progressive experience architecting and delivering high-throughput microservices, event-driven streaming systems, and cloud-native data platforms at Tier-1 financial institutions and enterprise-scale organizations. Deep expertise in Python (FastAPI, Flask), Apache Kafka, AWS, and ML/LLM integration — consistently delivering measurable business outcomes including cost savings, high pipeline reliability, and low-latency APIs. I translate complex business requirements into production-grade Python solutions and mentor engineering teams to deliver at scale.
               </p>
             </div>
 
@@ -82,12 +82,12 @@ export default function About() {
               </h3>
               <div className="grid sm:grid-cols-2 gap-3">
                 {[
-                  'Design scalable data pipelines (ETL/ELT)',
-                  'Build cloud-native solutions on AWS',
-                  'Develop predictive ML models',
-                  'Create interactive BI dashboards',
-                  'Optimize query performance & costs',
-                  'Implement data governance & security',
+                  'Python (FastAPI, Flask), async APIs',
+                  'Streaming: Kafka, MSK, Kinesis',
+                  'ETL/ELT: Airflow, DBT, Glue, PySpark',
+                  'Cloud & Infra: AWS, Terraform, Docker, Kubernetes',
+                  'Databases: Snowflake, Redshift, PostgreSQL, MongoDB',
+                  'Observability & Testing: Prometheus, Grafana, Pytest, Great Expectations',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2 text-gray-400">
                     <span className="text-neon mt-1">›</span>
