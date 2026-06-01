@@ -29,12 +29,12 @@ const contactMethods = [
 const socialLinks = [
   {
     icon: Linkedin,
-    href: 'https://linkedin.com',
+    href: 'http://www.linkedin.com/in/sainikithdanday',
     label: 'LinkedIn'
   },
   {
     icon: Github,
-    href: 'https://github.com',
+    href: 'https://github.com/sdnikith',
     label: 'GitHub'
   },
 ];
